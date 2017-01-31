@@ -2,48 +2,76 @@ const Node = require('./node');
 
 class LinkedList {
     constructor() {
-
-
-        this.head=null;
-        this.tail=null;
+        this._head=null;
+        this._tail=null;
         this.length=0;
     }
 
 
-     append(data) {
-          /*if (this.head=null) {
-             this.head=this.append;
-             this.tail=this.append;
-         }*/
+     append(data) {  /* добавление новой ячейки, при добавлении в пустой список присваивать значения добавляемой ячейки,
+       при добавлении не в пустой список добавлять данные в конец списка*/
 
-
-    }
-
-   head(append) {
-
-        /*if (this.length=0) {
-            head=append;
-        }*/
+           var newpart=new Node(data);
+           if (this.length==0) {
+             this._head=newpart;
+             this._tail=newpart;
+           } else {
+               this._tail=newpart;
+           }
+         this.length++;
 
     }
 
-     tail() {}
+   head() {  /* начало списка */
 
-    at(index) {}
+       if (this._head != null) {
+            return this._head.data;
+        }
 
-    insertAt(index, data) {}
+    }
 
-    isEmpty() {}
+     tail() {  /* конец списка */
+         if (this._tail != null) {
+             return this._tail.data;
+         }
 
-    clear() {
+     }
+
+    at(index) { /*возвращает данные по индексу*/
+
+    }
+
+    insertAt(index, data) { /*вставляет данные в определенный индекс*/
+
+    }
+
+    isEmpty() {  /* проверка на наличие данных в списке */
+
+         if (this.length==0) {
+         return true;
+         } else {
+             return false;
+
+         }
+
+       }
+
+    clear()  {  /*удаляет данные из списка*/
         
     }
 
-    deleteAt(index) {}
 
-    reverse() {}
+    deleteAt(index) { /* удаляет элемент по индексу*/
+            
+        }
 
-    indexOf(data) {}
+    reverse() { /*меняет направление списка */ 
+        }
+
+    indexOf(data) { /* возвращает индекс элемента по данным */
+        
+        }
+
 }
 
 module.exports = LinkedList;

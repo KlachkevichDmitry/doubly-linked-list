@@ -53,15 +53,15 @@ class LinkedList {
         }
     }*/
 
-    isEmpty() {
+   /* isEmpty() {
          if (this.length==0) {
          return true;
          } else {
              return false;
          }
-       }
+       }*/
 
-   /*clear()  {
+   clear()  {
             while (this.length>0) {
             this._head.data = null;
             this._head.prev = null;
@@ -71,7 +71,7 @@ class LinkedList {
             this._tail.next = null;
             this.length--;
         }
-    }*/
+    }
 
 
     deleteAt(index) { /* удаляет элемент по индексу*/

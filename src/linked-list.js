@@ -29,11 +29,11 @@ class LinkedList {
         }
     }
 
-     tail() {
+    /* tail() {
          if (this.length != null) {
              return this._tail.data;
          }
-     }
+     }*/
 
     /*at(index) {
         var fact=this._head;

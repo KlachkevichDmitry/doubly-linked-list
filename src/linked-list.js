@@ -35,7 +35,7 @@ class LinkedList {
          }
      }
 
-    at(index) {
+    /*at(index) {
         var fact=this._head;
         for (var i=0; i<index; i++) {
             fact=fact.next;
@@ -51,7 +51,7 @@ class LinkedList {
             fact.data=(new Node(data)).data;
             }
         }
-    }
+    }*/
 
     isEmpty() {
          if (this.length==0) {
@@ -59,9 +59,9 @@ class LinkedList {
          } else {
              return false;
          }
-       }*/
+       }
 
-   /* clear()  {
+   clear()  {
             while (this.length>0) {
             this._head.data = null;
             this._head.prev = null;
@@ -71,7 +71,7 @@ class LinkedList {
             this._tail.next = null;
             this.length--;
         }
-    }*/
+    }
 
 
     deleteAt(index) { /* удаляет элемент по индексу*/

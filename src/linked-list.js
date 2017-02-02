@@ -23,7 +23,7 @@ class LinkedList {
          return this;
     }
 
-    /*head() {
+    head() {
        if (this.length != null) {
             return this._head.data;
         }
@@ -33,9 +33,9 @@ class LinkedList {
          if (this.length != null) {
              return this._tail.data;
          }
-     }*/
+     }
 
-    /*at(index) {
+    at(index) {
         var fact=this._head;
         for (var i=0; i<index; i++) {
             fact=fact.next;
@@ -43,7 +43,7 @@ class LinkedList {
         return fact.data;
     }
 
-    /*insertAt(index, data) {
+    insertAt(index, data) {
         var fact=this._head;
         for (var i=0; i<index; i++)  {
             fact=fact.next;
@@ -51,17 +51,17 @@ class LinkedList {
             fact.data=(new Node(data)).data;
             }
         }
-    }*/
+    }
 
-   /* isEmpty() {
+   isEmpty() {
          if (this.length==0) {
          return true;
          } else {
              return false;
          }
-       }*/
+       }
 
-   /*clear()  {
+   clear()  {
             while (this.length>0) {
             this._head.data = null;
             this._head.prev = null;
@@ -71,7 +71,7 @@ class LinkedList {
             this._tail.next = null;
             this.length--;
         }
-    }*/
+    }
 
 
     deleteAt(index) { /* удаляет элемент по индексу*/

@@ -35,7 +35,7 @@ class LinkedList {
          }
      }
 
-    /*at(index) {
+    at(index) {
         var fact=this._head;
         for (var i=0; i<index; i++) {
             fact=fact.next;
@@ -43,7 +43,7 @@ class LinkedList {
         return fact.data;
     }
 
-    insertAt(index, data) {
+    /*insertAt(index, data) {
         var fact=this._head;
         for (var i=0; i<index; i++)  {
             fact=fact.next;
@@ -59,7 +59,7 @@ class LinkedList {
          } else {
              return false;
          }
-       }
+       }*/
 
     clear()  {
             while (this.length>0) {

@@ -23,11 +23,11 @@ class LinkedList {
          return this;
     }
 
-    head() {
+    /*head() {
        if (this.length != null) {
             return this._head.data;
         }
-    }
+    }*/
 
     /* tail() {
          if (this.length != null) {

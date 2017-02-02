@@ -23,7 +23,7 @@ class LinkedList {
          return this;
     }
 
-   /* head() {
+    head() {
        if (this.length != null) {
             return this._head.data;
         }
@@ -35,7 +35,7 @@ class LinkedList {
          }
      }
 
-    at(index) {
+    /*at(index) {
         var fact=this._head;
         for (var i=0; i<index; i++) {
             fact=fact.next;

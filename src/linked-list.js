@@ -35,7 +35,7 @@ class LinkedList {
          }
      }
 
-    at(index) {
+   /* at(index) {
         var fact=this._head;
         for (var i=0; i<index; i++) {
             fact=fact.next;
@@ -71,7 +71,7 @@ class LinkedList {
             this._tail.next = null;
             this.length--;
         }
-    }
+    }*/
 
 
     deleteAt(index) { /* удаляет элемент по индексу*/

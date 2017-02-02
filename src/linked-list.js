@@ -23,19 +23,19 @@ class LinkedList {
          return this;
     }
 
-    head() {  /* начало списка */
+   /* head() {
        if (this.length != null) {
             return this._head.data;
         }
     }
 
-     tail() {  /* конец списка */
+     tail() {
          if (this.length != null) {
              return this._tail.data;
          }
      }
 
-    at(index) { /*возвращает данные по индексу*/
+    at(index) {
         var fact=this._head;
         for (var i=0; i<index; i++) {
             fact=fact.next;
@@ -43,7 +43,7 @@ class LinkedList {
         return fact.data;
     }
 
-    insertAt(index, data) { /*вставляет данные в определенный индекс*/
+    insertAt(index, data) {
         var fact=this._head;
         for (var i=0; i<index; i++)  {
             fact=fact.next;
@@ -53,7 +53,7 @@ class LinkedList {
         }
     }
 
-    isEmpty() {  /* проверка на наличие данных в списке */
+    isEmpty() {
          if (this.length==0) {
          return true;
          } else {
@@ -61,7 +61,7 @@ class LinkedList {
          }
        }
 
-    clear()  {  /*удаляет данные из списка*/
+    clear()  {
             while (this.length>0) {
             this._head.data = null;
             this._head.prev = null;

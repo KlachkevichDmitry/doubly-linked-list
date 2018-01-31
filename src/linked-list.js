@@ -23,43 +23,35 @@ class LinkedList {
          return this;
     }
 
-    head() {
-       if (this.length != null) {
+    head() {//возвращает данные из начала списка
             return this._head.data;
-        }
     }
 
-     tail() {
-         if (this.length != null) {
+     tail() {// возвращает данные из конца списка
              return this._tail.data;
-         }
      }
-
-    at(index) {
-        var fact=this._head;
+    at(index) { //возвращает данные по индексу
+        var base=this._head;
         for (var i=0; i<index; i++) {
-            fact=fact.next;
+            base=base.next;
         }
-        return fact.data;
+        return base.data;
     }
 
-    insertAt(index, data) {
-        var fact=this._head;
+    insertAt(index, data) {// добавляет данные по индексу
+        var base=this._head;
         for (var i=0; i<index; i++)  {
-            fact=fact.next;
+            base=base.next;
             if (i=index){
-            fact.data=(new Node(data)).data;
+            base.data=(new Node(data)).data;
             }
         }
     }
 
-   isEmpty() {
-         if (this.length==0) {
-         return true;
-         } else {
-             return false;
+   isEmpty() {// возвращает true если лист пустой
+         return this.length==0;
          }
-       }
+       
 
    clear()  {
             while (this.length>0) {
@@ -75,14 +67,20 @@ class LinkedList {
 
 
     /*deleteAt(index) {
-
+	}
 
     reverse(){
-        }
-
-    indexOf(data){
-
         }*/
+
+    indexOf(data){//перебирает циклом по списку, если данные не найдены возвращает -1
+	   var base=this._head;
+	   var index=-1;
+	   for (var i=0; i<this.length; i++) {
+		   if (base.data==data) {
+			   return index=i;}
+	          base=base.next;}
+	   return index;
+      }
 
 }
 

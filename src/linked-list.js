@@ -7,7 +7,6 @@ class LinkedList {
         this.length=0;
     }
 
-
     append(data) {  /* добавление новой ячейки, при добавлении в пустой список присваивать значения добавляемой ячейки,
        при добавлении не в пустой список добавлять данные в конец списка*/
            var newpart=new Node(data);
@@ -27,7 +26,7 @@ class LinkedList {
             return this._head.data;
     }
 
-     tail() {// возвращает данные из конца списка
+    tail() {// возвращает данные из конца списка
              return this._tail.data;
      }
     at(index) { //возвращает данные по индексу
@@ -48,12 +47,11 @@ class LinkedList {
         }
     }
 
-   isEmpty() {// возвращает true если лист пустой
+    isEmpty() {// возвращает true если лист пустой
          return this.length==0;
          }
        
-
-   clear()  {
+    clear()  {
             while (this.length>0) {
             this._head.data = null;
             this._head.prev = null;
@@ -63,14 +61,37 @@ class LinkedList {
             this._tail.next = null;
             this.length--;
         }
+		return this;
     }
 
+    deleteAt(index) {
+		var base=this._head;
+        for (var i=0; i<index; i++)  {
+			base=base.next;}
+        if (base.prev==null){
+			this.head=base.next;
+        }else if(base.next==null) {
+			this._tail=base.prev;
+		}else{
+			base.prev.next=base.next;
+			base.next.prev=base.prev;
+		}	
+      this.length--;
+      return this;
+    }
 
-    /*deleteAt(index) {
-	}
-
-    reverse(){
-        }*/
+	reverse() {//переворачивает список
+        var head=this._head;
+        var tail=this._tail;
+        for (var i=0; i<(this.length-1)/2; i++) {
+            var temp=head.data;
+            head.data=tail.data;
+			tail.data=temp;
+            tail=tail.prev;
+            head=head.next;
+        }
+        return this;
+    }
 
     indexOf(data){//перебирает циклом по списку, если данные не найдены возвращает -1
 	   var base=this._head;
